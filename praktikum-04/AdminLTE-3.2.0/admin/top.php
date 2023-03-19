@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <title>Admin Yudha Web</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' />
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css'/>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -156,6 +158,30 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li class="nav-item">
+          <div class="nav-link" role="button">
+            <div class="form-check form-switch">
+              <input class="form-check-input" id="darkModeToggle" type="checkbox" role="switch" checked>
+              <i class="fa-regular fa-moon" style="cursor: default;"></i>
+            </div>
+          </div>
+        </li>
     </ul>
   </nav>
+
+  <script>
+      // Toggle Dark Mode
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const nav = document.querySelector("nav");
+
+      darkModeToggle.addEventListener("change", function () {
+        if (darkModeToggle.checked) {
+          document.body.classList.add("dark-mode");
+          nav.classList.add("navbar-light");
+        } else {
+          document.body.classList.remove("dark-mode");
+          nav.classList.remove("navbar-light");
+        }
+      });
+    </script>
   <!-- /.navbar -->

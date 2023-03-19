@@ -8,11 +8,11 @@
     </div> -->
     <?php 
     error_reporting(0);
-    $hal = $_GET['hal'];
-    if($hal == 'dashboard.php'){
+    $key = $_GET['key'];
+    if($key == 'dashboard.php'){
         include_once 'dashboard.php';
-    } else if(!empty ($hal)) {
-        include_once ''.$hal.'.php';
+    } else if(!empty ($key)) {
+        include_once ''.$key.'.php';
     } else {
         include_once 'dashboard.php';
     }
