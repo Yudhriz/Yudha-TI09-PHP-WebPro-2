@@ -107,4 +107,5 @@ require_once 'dbkoneksi.php';
             <input type="submit" name="proses" class="btn btn-primary" value="Update" />
         </div>
     </div>
+    <input type="hidden" name="idedit" value="<?php echo isset($_GET['idedit']) ? $_GET['idedit'] : ''; ?>">
 </form>

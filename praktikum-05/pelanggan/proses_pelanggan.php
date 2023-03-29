@@ -26,9 +26,9 @@ if ($_proses == "Simpan") {
    $sql = "INSERT INTO pelanggan (kode,nama,jk,tmp_lahir,tgl_lahir,
     email,kartu_id) VALUES (?,?,?,?,?,?,?)";
 } else if ($_proses == "Update") {
-   $id = $_POST['idedit']; // ? 8
-   $sql = "UPDATE pelanggan SET kode=?,nama=?,jk=?,tmp_lahir=?,tgl_lahir=?,email=?,kartu_id=? WHERE id=?";
-   $ar_data[] = $id;
+   $ar_data[] = $_POST['idedit']; // ? 8
+   $sql = "UPDATE pelanggan SET kode=?,nama=?,jk=?,tmp_lahir=?,
+   tgl_lahir=?,email=?,kartu_id=? WHERE id=?";
 }
 if (isset($sql)) {
    $st = $dbh->prepare($sql);
