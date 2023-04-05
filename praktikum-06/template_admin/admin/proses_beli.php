@@ -8,6 +8,7 @@ $_produk_id = $_POST['produk_id'];
 $_jumlah = $_POST['jumlah'];
 $_harga = $_POST['harga'];
 $_vendor_id = $_POST['vendor_id'];
+$_proses = $_POST['proses'];
 
 // array data
 $ar_data[] = $_tgl; // ? 1
