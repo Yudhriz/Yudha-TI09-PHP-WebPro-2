@@ -2,6 +2,10 @@
 require_once 'dbkoneksi.php';
 ?>
 <?php
+include_once 'top.php';
+include_once 'menu.php';
+?>
+<?php
 $_id = $_GET['id'];
 // select * from produk where id = $_id;
 //$sql = "SELECT a.*,b.nama as jenis FROM produk a
@@ -45,3 +49,6 @@ $row = $st->fetch();
         </tr>
     </tbody>
 </table>
+<?php
+include_once 'bottom.php';
+?>

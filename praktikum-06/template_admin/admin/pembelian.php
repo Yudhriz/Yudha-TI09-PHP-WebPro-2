@@ -22,7 +22,7 @@ $rs = $dbh->query($sql);
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-success" href="index.php?hal=form_beli">Create Pelanggan</a>
+        <a class="btn btn-success" href="index.php?hal=form_beli">Create Pembelian</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
