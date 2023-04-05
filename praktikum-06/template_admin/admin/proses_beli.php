@@ -13,13 +13,13 @@ $_vendor_id = $_POST['vendor_id'];
 $ar_data[] = $_tgl; // ? 1
 $ar_data[] = $_nomor; // 2
 $ar_data[] = $_produk_id; // ? 3
-$ar_data[] = $_jumlah; // ? 3
-$ar_data[] = $_harga; // ? 3
-$ar_data[] = $_vendor_id; // ? 3
+$ar_data[] = $_jumlah; // ? 4
+$ar_data[] = $_harga; // ? 5
+$ar_data[] = $_vendor_id; // ? 6
 
 if ($_proses == "Simpan") {
    // data baru
-   $sql = "INSERT INTO pembelian (tanggal, nomor, produk_id, jumlah, harga, vendor_id) VALUES (?,?,?)";
+   $sql = "INSERT INTO pembelian (tanggal, nomor, produk_id, jumlah, harga, vendor_id) VALUES (?,?,?,?,?,?)";
 } else if ($_proses == "Update") {
    $ar_data[] = $_POST['idedit']; // ? 8
    $sql = "UPDATE pembelian SET tanggal=?, nomor=?, produk_id=?, jumlah=?, harga=?, vendor_id=? WHERE id=?";
@@ -29,5 +29,5 @@ if (isset($sql)) {
    $st->execute($ar_data);
 }
 
-header('location:list_pembelian.php');
+header('location: index.php?hal=pembelian');
 ?>

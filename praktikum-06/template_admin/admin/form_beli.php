@@ -15,7 +15,7 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="tanggal" name="tanggal" type="text" class="form-control" value="">
+                <input id="tanggal" name="tanggal" type="date" class="form-control" value="">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="produk_id" name="produk_id" type="text" class="form-control" value="">
+                <input id="produk_id" name="produk_id" type="text" class="form-control">
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="jumlah" name="jumlah" type="text" class="form-control" value="">
+                <input id="jumlah" name="jumlah" type="text" class="form-control">
             </div>
         </div>
     </div>
@@ -67,7 +67,7 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="harga" name="harga" type="text" class="form-control" value="">
+                <input id="harga" name="harga" type="text" class="form-control">
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="vendor_id" name="vendor_id" type="text" class="form-control" value="">
+                <input id="vendor_id" name="vendor_id" type="text" class="form-control">
             </div>
         </div>
     </div>

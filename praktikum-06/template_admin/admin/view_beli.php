@@ -44,7 +44,7 @@ $row = $st->fetch();
             <td><?= $row['harga'] ?></td>
         </tr>
         <tr>
-            <td>Vendor</td>
+            <td>Vendor ID</td>
             <td><?= $row['vendor_id'] ?></td>
         </tr>
     </tbody>

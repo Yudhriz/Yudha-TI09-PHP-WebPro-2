@@ -16,7 +16,7 @@ $ar_data[] = $_kontak; // ? 4
 
 if ($_proses == "Simpan") {
    // data baru
-   $sql = "INSERT INTO vendor (nomor, nama, kota, kontak) VALUES (?,?,?)";
+   $sql = "INSERT INTO vendor (nomor, nama, kota, kontak) VALUES (?,?,?,?)";
 } else if ($_proses == "Update") {
    $ar_data[] = $_POST['idedit']; // ? 8
    $sql = "UPDATE vendor SET nomor=?, nama=?,kota=?, kontak=? WHERE id=?";
