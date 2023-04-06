@@ -2,10 +2,6 @@
 require_once 'dbkoneksi.php';
 ?>
 <?php
-include_once 'top.php';
-include_once 'menu.php';
-?>
-<?php
     $_id = $_GET['id'];
     // select * from produk where id = $_id;
     //$sql = "SELECT a.*,b.nama as jenis FROM produk a
@@ -29,6 +25,3 @@ include_once 'menu.php';
         <tr>   <td>Jenis Produk</td><td><?=$row['jenis_produk_id']?></td></tr>
     </tbody>
 </table>
-<?php
-include_once 'bottom.php';
-?>

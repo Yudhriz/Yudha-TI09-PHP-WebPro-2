@@ -2,15 +2,11 @@
 require_once 'dbkoneksi.php';
 ?>
 <?php
-include_once 'top.php';
-include_once 'menu.php';
-?>
-<?php
 $_id = $_GET['id'];
 // select * from produk where id = $_id;
 //$sql = "SELECT a.*,b.nama as jenis FROM produk a
 //INNER JOIN jenis_produk b ON a.jenis_produk_id=b.id WHERE a.id=?";
-$sql = "SELECT * FROM kartu WHERE id=?";
+$sql = "SELECT * FROM pembelian WHERE id=?";
 $st = $dbh->prepare($sql);
 $st->execute([$_id]);
 $row = $st->fetch();
@@ -24,23 +20,28 @@ $row = $st->fetch();
             <td><?= $row['id'] ?></td>
         </tr>
         <tr>
-            <td>Kode</td>
-            <td><?= $row['kode'] ?></td>
+            <td>Tanggal</td>
+            <td><?= $row['tanggal'] ?></td>
         </tr>
         <tr>
-            <td>Nama Kartu</td>
-            <td><?= $row['nama'] ?></td>
+            <td>Nomor</td>
+            <td><?= $row['nomor'] ?></td>
         </tr>
         <tr>
-            <td>Diskon</td>
-            <td><?= $row['diskon'] ?></td>
+            <td>Produk ID</td>
+            <td><?= $row['produk_id'] ?></td>
         </tr>
         <tr>
-            <td>Iuran</td>
-            <td><?= $row['iuran'] ?></td>
+            <td>Jumlah</td>
+            <td><?= $row['jumlah'] ?></td>
+        </tr>
+        <tr>
+            <td>Harga</td>
+            <td><?= $row['harga'] ?></td>
+        </tr>
+        <tr>
+            <td>Vendor ID</td>
+            <td><?= $row['vendor_id'] ?></td>
         </tr>
     </tbody>
 </table>
-<?php
-include_once 'bottom.php';
-?>

@@ -1,13 +1,22 @@
 <?php
 require_once 'dbkoneksi.php';
 ?>
-<?php
-include_once 'top.php';
-include_once 'menu.php';
-?>
-<form class="mt-4" method="POST" action="proses_vendor.php">
+<form class="mt-4" method="POST" action="table_pembelian/proses_beli.php">
     <div class="form-group row mb-2">
-        <label for="nomor" class="col-4 col-form-label">Nomor Kode</label>
+        <label for="tanggal" class="col-4 col-form-label">Tanggal</label>
+        <div class="col-8">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <!-- <div class="input-group-text">
+                        <i class="fa fa-anchor"></i>
+                    </div> -->
+                </div>
+                <input id="tanggal" name="tanggal" type="date" class="form-control" value="">
+            </div>
+        </div>
+    </div>
+    <div class="form-group row mb-2">
+        <label for="nomor" class="col-4 col-form-label">Nomor</label>
         <div class="col-8">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -20,7 +29,7 @@ include_once 'menu.php';
         </div>
     </div>
     <div class="form-group row mb-2">
-        <label for="nama" class="col-4 col-form-label">Nama Vendor</label>
+        <label for="produk_id" class="col-4 col-form-label">Produk ID</label>
         <div class="col-8">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -28,12 +37,12 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="nama" name="nama" type="text" class="form-control" value="">
+                <input id="produk_id" name="produk_id" type="text" class="form-control">
             </div>
         </div>
     </div>
     <div class="form-group row mb-2">
-        <label for="kota" class="col-4 col-form-label">Kota</label>
+        <label for="jumlah" class="col-4 col-form-label">Jumlah</label>
         <div class="col-8">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -41,12 +50,12 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="kota" name="kota" type="text" class="form-control" value="">
+                <input id="jumlah" name="jumlah" type="text" class="form-control">
             </div>
         </div>
     </div>
     <div class="form-group row mb-2">
-        <label for="kontak" class="col-4 col-form-label">Kontak</label>
+        <label for="harga" class="col-4 col-form-label">Harga</label>
         <div class="col-8">
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -54,22 +63,31 @@ include_once 'menu.php';
                         <i class="fa fa-anchor"></i>
                     </div> -->
                 </div>
-                <input id="kontak" name="kontak" type="text" class="form-control" value="">
+                <input id="harga" name="harga" type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="form-group row mb-2">
+        <label for="vendor_id" class="col-4 col-form-label">Vendor ID</label>
+        <div class="col-8">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <!-- <div class="input-group-text">
+                        <i class="fa fa-anchor"></i>
+                    </div> -->
+                </div>
+                <input id="vendor_id" name="vendor_id" type="text" class="form-control">
             </div>
         </div>
     </div>
     <div class="form-group row">
         <div class="offset-4 col-8">
-            <input type="submit" name="proses" class="btn btn-primary" value="<?php if (isset($_GET['idedit'])) {
+        <input type="submit" name="proses" class="btn btn-primary" value="<?php if (isset($_GET['idedit'])) {
                                                                                     echo 'Update';
                                                                                 } else {
                                                                                     echo 'Simpan';
                                                                                 } ?>" />
         </div>
     </div>
-    </div>
     <input type="hidden" name="idedit" value="<?php echo isset($_GET['idedit']) ? $_GET['idedit'] : ''; ?>">
 </form>
-<?php
-include_once 'bottom.php';
-?>

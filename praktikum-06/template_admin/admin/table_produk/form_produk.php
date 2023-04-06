@@ -1,11 +1,7 @@
 <?php
 require_once 'dbkoneksi.php';
 ?>
-<?php
-include_once 'top.php';
-include_once 'menu.php';
-?>
-<form class="mt-4" method="POST" action="proses_produk.php">
+<form class="mt-4" method="POST" action="table_produk/proses_produk.php">
   <div class="form-group row mb-2">
     <label for="kode" class="col-4 col-form-label">Kode</label>
     <div class="col-8">
@@ -104,6 +100,3 @@ include_once 'menu.php';
     </div>
   </div>
 </form>
-<?php
-include_once 'bottom.php';
-?>

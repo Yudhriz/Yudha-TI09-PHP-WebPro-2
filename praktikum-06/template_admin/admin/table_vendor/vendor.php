@@ -2,7 +2,7 @@
 require_once 'dbkoneksi.php';
 ?>
 <?php
-$sql = "SELECT * FROM kartu";
+$sql = "SELECT * FROM vendor";
 $rs = $dbh->query($sql);
 ?>
 
@@ -22,27 +22,27 @@ $rs = $dbh->query($sql);
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-success" href="index.php?hal=form_kartu">Create Kartu</a>
+        <a class="btn btn-success" href="index.php?hal=table_vendor/form_vendor">Create Vendor</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Kode</th>
+                    <th>Nomor Kode</th>
                     <th>Nama</th>
-                    <th>Diskon</th>
-                    <th>Iuran</th>
+                    <th>Kota</th>
+                    <th>Kontak</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tfoot>
                 <tr>
                     <th>No</th>
-                    <th>Kode</th>
+                    <th>Nomor KOde</th>
                     <th>Nama</th>
-                    <th>Diskon</th>
-                    <th>Iuran</th>
+                    <th>Kota</th>
+                    <th>Kontak</th>
                     <th>Action</th>
                 </tr>
             </tfoot>
@@ -53,14 +53,14 @@ $rs = $dbh->query($sql);
                 ?>
                     <tr>
                         <td><?= $nomor ?></td>
-                        <td><?= $row['kode'] ?></td>
+                        <td><?= $row['nomor'] ?></td>
                         <td><?= $row['nama'] ?></td>
-                        <td><?= $row['diskon'] ?></td>
-                        <td><?= $row['iuran'] ?></td>
+                        <td><?= $row['kota'] ?></td>
+                        <td><?= $row['kontak'] ?></td>
                         <td>
-                            <a class="btn btn-primary" href="view_kartu.php?id=<?= $row['id'] ?>">View</a>
-                            <a class="btn btn-primary" href="form_kartu.php?idedit=<?= $row['id'] ?>">Edit</a>
-                            <a class="btn btn-primary" href="delete_kartu.php?iddel=<?= $row['id'] ?>" onclick="if(!confirm('Anda Yakin Hapus Data Kartu <?= $row['nama'] ?>?')) {return false}">Delete</a>
+                            <a class="btn btn-primary" href="index.php?hal=table_vendor/view_vendor&id=<?= $row['id'] ?>">View</a>
+                            <a class="btn btn-primary" href="index.php?hal=table_vendor/form_vendor&idedit=<?= $row['id'] ?>">Edit</a>
+                            <a class="btn btn-primary" href="table_vendor/delete_vendor.php?iddel=<?= $row['id'] ?>" onclick="if(!confirm('Anda Yakin Hapus Data Vendor <?= $row['nama'] ?>?')) {return false}">Delete</a>
                         </td>
                     </tr>
                 <?php

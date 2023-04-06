@@ -20,11 +20,11 @@
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="index.php?hal=produk">Produk</a>
-                            <a class="nav-link" href="index.php?hal=pelanggan">Pelanggan</a>
-                            <a class="nav-link" href="index.php?hal=vendor">Vendor</a>
-                            <a class="nav-link" href="index.php?hal=pembelian">Pembelian</a>
-                            <a class="nav-link" href="index.php?hal=kartu">Kartu</a>
+                            <a class="nav-link" href="index.php?hal=table_produk/produk">Produk</a>
+                            <a class="nav-link" href="index.php?hal=table_pelanggan/pelanggan">Pelanggan</a>
+                            <a class="nav-link" href="index.php?hal=table_vendor/vendor">Vendor</a>
+                            <a class="nav-link" href="index.php?hal=table_pembelian/pembelian">Pembelian</a>
+                            <a class="nav-link" href="index.php?hal=table_kartu/kartu">Kartu</a>
                         </nav>
                     </div>
                     <div class="sb-sidenav-menu-heading">Praktikum</div>

@@ -22,7 +22,7 @@ $rs = $dbh->query($sql);
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-success" href="index.php?hal=form_produk">Create Produk</a>
+        <a class="btn btn-success" href="index.php?hal=table_produk/form_produk">Create Produk</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -58,9 +58,9 @@ $rs = $dbh->query($sql);
                 <td><?= $row['harga_jual'] ?></td>
                 <td><?= $row['stok'] ?></td>
                 <td>
-                    <a class="btn btn-primary" href="view_produk.php?id=<?= $row['id'] ?>">View</a>
-                    <a class="btn btn-primary" href="form_produk.php?idedit=<?= $row['id'] ?>">Edit</a>
-                    <a class="btn btn-primary" href="delete_produk.php?iddel=<?= $row['id'] ?>" onclick="if(!confirm('Anda Yakin Hapus Data Produk <?= $row['nama'] ?>?')) {return false}">Delete</a>
+                    <a class="btn btn-primary" href="index.php?hal=table_produk/view_produk&id=<?= $row['id'] ?>">View</a>
+                    <a class="btn btn-primary" href="index.php?hal=table_produk/form_produk&idedit=<?= $row['id'] ?>">Edit</a>
+                    <a class="btn btn-primary" href="table_produk/delete_produk.php?iddel=<?= $row['id'] ?>" onclick="if(!confirm('Anda Yakin Hapus Data Produk <?= $row['nama'] ?>?')) {return false}">Delete</a>
                 </td>
             </tr>
         <?php

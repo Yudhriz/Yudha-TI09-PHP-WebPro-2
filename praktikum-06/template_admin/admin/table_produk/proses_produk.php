@@ -1,5 +1,5 @@
 <?php 
-require_once 'dbkoneksi.php';
+require_once '../dbkoneksi.php';
 ?>
 <?php 
    $_kode = $_POST['kode'];
@@ -34,5 +34,5 @@ require_once 'dbkoneksi.php';
     $st->execute($ar_data);
    }
 
-   header('location: index.php?hal=produk');
+   header('location: ../index.php?hal=table_produk/produk');
 ?>

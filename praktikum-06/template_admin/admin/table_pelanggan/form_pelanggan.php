@@ -1,11 +1,7 @@
 <?php
 require_once 'dbkoneksi.php';
 ?>
-<?php
-include_once 'top.php';
-include_once 'menu.php';
-?>
-<form class="mt-4" method="POST" action="proses_pelanggan.php">
+<form class="mt-4" method="POST" action="table_pelanggan/proses_pelanggan.php">
     <div class="form-group row mb-2">
         <label for="kode" class="col-4 col-form-label">Kode</label>
         <div class="col-8">
@@ -119,6 +115,3 @@ include_once 'menu.php';
     </div>
     <input type="hidden" name="idedit" value="<?php echo isset($_GET['idedit']) ? $_GET['idedit'] : ''; ?>">
 </form>
-<?php
-include_once 'bottom.php';
-?>
